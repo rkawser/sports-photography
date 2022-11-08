@@ -1,26 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import loginImage from '../../image/login.png'
+import Loading from '../Share/Loading';
 import Social from '../Share/Social/Social';
+import swal from 'sweetalert';
 const Login = () => {
 
-const handleBlurEmail=e=>{
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [signInWithEmailAndPassword, Googleuser, loading, error,] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, Reseterror] = useSendPasswordResetEmail(auth);
 
-}
+    const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
-const handleBlurPassword =e=>{
 
-}
+    if (loading) {
+        return <Loading></Loading>
+    }
 
-const handleloginSubmit=e=>{
+    if (user) {
+        navigate('/home');
+    }
 
-    e.preventDefault()
-}
+    if (error || Reseterror) {
+        swal({
+            title: `Login Failed !`,
+            text: "Something went Wrong",
+            icon: "error",
+        });
+    }
 
-const resetPassword =()=>{
 
-}
+    const handleBlurEmail = e => {
+        setEmail(e.target.value)
+    }
+
+    const handleBlurPassword = e => {
+        setPassword(e.target.value)
+    }
+
+    const handleloginSubmit = e => {
+        signInWithEmailAndPassword(email, password)
+            .then(() => {
+                swal("Good Job!", "Login Success!", "success");
+            })
+        e.preventDefault()
+    }
+
+    const resetPassword = async () => {
+        await sendPasswordResetEmail(email)
+        swal("Reset Email send!", "You can check your gmail!", "success");
+    }
 
 
     return (
@@ -40,7 +74,7 @@ const resetPassword =()=>{
                         <p className='mt-2 '>New User? <Link className='text-decoration-none text-dark fw-bold' to='/register'>go to Register page</Link> </p>
 
                         <button onClick={resetPassword} className='btn btn-danger'> resetPassword</button>
-                        
+
                     </form>
                     <Social></Social>
                 </Col>

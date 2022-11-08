@@ -5,7 +5,7 @@ import logo from '../../../image/logo.png'
 import {useAuthState} from 'react-firebase-hooks/auth'
 import auth from '../../../firebase.init';
 import {signOut} from 'firebase/auth'
-
+import swal from 'sweetalert';
 const Header = () => {
 
   const [user]= useAuthState(auth);
@@ -25,7 +25,11 @@ const Header = () => {
           <Nav>
             <Nav.Link as={Link} to='/about'>About</Nav.Link>
 {         user ?
-            <button onClick={()=>signOut(auth)} className='btn btn-danger'>signOut</button>
+            <button onClick={()=>signOut(auth)
+            .then(()=>{
+              swal("SignOut","success");
+            })
+            } className='btn btn-danger'>signOut</button>
             :
             <Nav.Link as={Link} to='/login' className='btn btn-primary' eventKey={2} href="#memes">
               Login
