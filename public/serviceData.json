@@ -3,36 +3,66 @@
       "id": 1,
       "name": "Batminton",
       "img": "https://i.ibb.co/2kdd83p/card1.png",
-      "Image": ""
+      "Image1": "https://i.ibb.co/vZsCzCN/batminton1.jpg",
+      "Image2": "https://i.ibb.co/qyhQTr8/batminton2.jpg",
+      "Image3": "https://i.ibb.co/pvtJscs/batminton3.jpg",
+      "Image4": "https://i.ibb.co/Dzx39YK/batminton4.jpg",
+      "Image5": "https://i.ibb.co/Z1mgJK6/batminton5.jpg",
+      "Image6": "https://i.ibb.co/V30SpL4/batminton6.jpg"
     },
     {
       "id": 2,
       "name": "Volley Ball",
       "img": "https://i.ibb.co/FxCsLDJ/card4.png",
-      "Image": ""
+      "Image1": "https://i.ibb.co/7Kmm4kv/volleyball-1270213-340.jpg",
+      "Image2": "https://i.ibb.co/hRfL6gj/volleyball-1165916-340.jpg",
+      "Image3": "https://i.ibb.co/HtJGxxg/ball-1930192-340.jpg",
+      "Image4": "https://i.ibb.co/xLgLq6q/sunset-5560658-340.jpg",
+      "Image5": "https://i.ibb.co/DQftj1P/volleyball-90896-340.jpg",
+      "Image6": "https://i.ibb.co/RCq4YfH/volleyball-1617874-340.jpg"
     },
     {
       "id": 3,
       "name": "Cycaling",
       "img": "https://i.ibb.co/Yc2Xz89/card5.png",
-      "Image": ""
+      "Image1": "https://cdn.pixabay.com/photo/2018/05/08/04/44/person-3382248__340.jpg",
+      "Image2": "https://cdn.pixabay.com/photo/2016/03/26/22/47/motion-blur-1281675__340.jpg",
+      "Image3": "https://cdn.pixabay.com/photo/2015/03/21/14/34/silhouette-683751__340.jpg",
+      "Image4": "https://cdn.pixabay.com/photo/2020/04/17/14/07/athlete-5055367__340.jpg",
+      "Image5": "https://cdn.pixabay.com/photo/2019/09/24/10/38/bmx-4500982__340.jpg",
+      "Image6": "https://cdn.pixabay.com/photo/2015/05/20/16/51/bike-775799__340.jpg"
     },
     {
       "id": 4,
       "name": "Football",
       "img": "https://i.ibb.co/d0nWvJF/card6.png",
-      "Image": ""
+      "Image1": "https://cdn.pixabay.com/photo/2015/01/26/22/40/child-613199__340.jpg",
+      "Image2": "https://cdn.pixabay.com/photo/2016/11/14/02/31/jump-1822412__340.jpg",
+      "Image3": "https://cdn.pixabay.com/photo/2014/02/10/22/24/soccer-263716__340.jpg",
+      "Image4": "https://cdn.pixabay.com/photo/2016/03/28/09/35/soccer-ball-1285164__340.jpg",
+      "Image5": "https://cdn.pixabay.com/photo/2017/08/25/16/15/ball-2680595__340.jpg",
+      "Image6": "https://cdn.pixabay.com/photo/2016/11/08/05/18/football-1807520__340.jpg"
     },
     {
       "id": 5,
       "name": "Baseket bal",
       "img": "https://i.ibb.co/PrTD8GY/card2.png",
-      "Image": ""
+      "Image1": "https://cdn.pixabay.com/photo/2013/05/02/21/23/basketball-108622__340.jpg",
+      "Image2": "https://cdn.pixabay.com/photo/2017/04/25/05/44/basketball-2258650__340.jpg",
+      "Image3": "https://cdn.pixabay.com/photo/2020/03/10/16/47/moon-4919501__340.jpg",
+      "Image4": "https://cdn.pixabay.com/photo/2014/09/09/12/46/basketball-440057__340.jpg",
+      "Image5": "https://cdn.pixabay.com/photo/2016/07/27/01/36/basketball-1544370__340.jpg",
+      "Image6": "https://cdn.pixabay.com/photo/2013/02/15/02/16/basketball-81775__340.jpg"
     },
     {
       "id": 6,
       "name": "Golf",
       "img": "https://i.ibb.co/CBK7JcJ/will-porada-uy5-ZEq-UOscs-unsplash.png",
-      "Image": ""
+      "Image1": "https://cdn.pixabay.com/photo/2016/12/29/17/01/golf-1938932__340.jpg",
+      "Image2": "https://cdn.pixabay.com/photo/2022/05/23/04/44/disc-golf-7215229__340.jpg",
+      "Image3": "https://cdn.pixabay.com/photo/2015/05/28/10/12/golf-787826__340.jpg",
+      "Image4": "https://cdn.pixabay.com/photo/2018/09/17/09/26/golf-3683340__340.jpg",
+      "Image5": "https://cdn.pixabay.com/photo/2018/10/10/11/05/autumn-3736961__340.jpg",
+      "Image6": "https://cdn.pixabay.com/photo/2018/09/17/09/26/golf-3683338__340.jpg"
     }
   ]

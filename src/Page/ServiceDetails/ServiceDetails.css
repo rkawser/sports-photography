@@ -1,0 +1,18 @@
+.d-banner {
+    background-image: url('https://c1.wallpaperflare.com/preview/456/973/70/crowd-concert-smoke-people.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.719);
+    background-blend-mode: overlay;
+}
+
+/* .gellay img{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    column-width: 33%;
+    padding: 12px 12px;
+} */

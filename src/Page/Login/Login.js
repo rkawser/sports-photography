@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import loginImage from '../../image/login.png'
 import Loading from '../Share/Loading';
@@ -16,24 +16,16 @@ const Login = () => {
 
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
-
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
 
     if (loading) {
         return <Loading></Loading>
     }
 
     if (user) {
-        navigate('/home');
+        navigate(from, {replace:true});
     }
-
-    if (error || Reseterror) {
-        swal({
-            title: `Login Failed !`,
-            text: "Something went Wrong",
-            icon: "error",
-        });
-    }
-
 
     const handleBlurEmail = e => {
         setEmail(e.target.value)
@@ -67,8 +59,8 @@ const Login = () => {
                 <Col>
                     <form onSubmit={handleloginSubmit}>
                         <h2>Please Login</h2>
-                        <input onBlur={handleBlurEmail} type="email" name="" id="" placeholder='Email' /> <br />
-                        <input onBlur={handleBlurPassword} type="password" name="" id="" placeholder='password' /> <br />
+                        <input onBlur={handleBlurEmail} type="email" name="" id="" placeholder='Email' required /> <br />
+                        <input onBlur={handleBlurPassword} type="password" name="" id="" placeholder='password' required /> <br />
                         {/* <p>{error?.message}</p> */}
                         <input className='reg-btn' type="submit" value="Login" />
                         <p className='mt-2 '>New User? <Link className='text-decoration-none text-dark fw-bold' to='/register'>go to Register page</Link> </p>

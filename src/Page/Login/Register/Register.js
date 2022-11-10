@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import loginImage from '../../../image/login.png';
 import Social from '../../Share/Social/Social';
@@ -16,12 +16,12 @@ const Register = () => {
 
     const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, Updateupdating, Updateerror] = useUpdateProfile(auth);
-
-
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/'
 
     if (user) {
-        navigate('/home');
+        navigate(from, {replace:true});
     }
 
     const handleBlurName = e => {

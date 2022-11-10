@@ -1,0 +1,45 @@
+
+
+.f-text{
+    text-align: justify;
+    
+}
+
+.f-bg{
+    margin-top: 100px;
+    padding: 50px 10px;
+    /* background-color: rgba(0, 255, 255, 0.342); */
+    background-color: black;
+    text-align: justify;
+}
+
+.f-text img{
+    margin-bottom: 20px;
+}
+
+.f-text p{
+    color: aliceblue;
+}
+
+.f-bg h4{
+    margin-bottom: 20px;
+    font-weight: bolder;
+    color: rgba(240, 248, 255, 0.541);
+}
+
+.f-img {
+display: flex;
+}
+
+.f-img img {
+    opacity: 0.4;
+}
+
+.f-img img:hover{
+    opacity:1;
+    cursor: pointer;
+}
+
+.fS{
+    border-bottom: 2px solid yellow;
+}

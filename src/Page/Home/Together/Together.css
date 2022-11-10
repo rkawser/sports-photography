@@ -1,0 +1,52 @@
+
+
+.t-banner{
+    background-image: url('https://i.ibb.co/0GVLk3R/10001.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    margin-top:250px ;
+    background-color: rgba(0, 0, 0, 0.658);
+   background-blend-mode: overlay;
+}
+
+
+.t-text{
+    text-align: justify;
+}
+
+.t-text h1{
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: -1px;
+    line-height: 1.8;
+    color: aliceblue;
+    background: linear-gradient(to right, aqua 0%, red 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+.t-text h5{
+    line-height:2;
+    color: aliceblue;
+   
+}
+
+.t-btn{
+    width: 160px;
+    height: 50px;
+    border-radius:50px;
+    background: linear-gradient(to right, rgba(0, 255, 255, 0.808) 0%, rgba(255, 0, 0, 0.541) 100%);
+    border: none;
+    transition: 1.6s;
+    color: white
+}
+
+.t-btn:hover{
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.432) 0%, rgba(0, 255, 255, 0.479));
+   
+}

@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const Service = ({ service }) => {
     const { img, name, id } = service;
     return (
@@ -8,7 +8,7 @@ const Service = ({ service }) => {
             <Card className='h-100' >
                 <Card.Img variant="top" src={img}  className='h-100' />
                 <Card.Body className='bg-dark '>
-                    <Button variant="primary" >Go somewhere</Button>
+                    <Link to={`/service/${id}`}><Button variant="primary" >Go somewhere</Button> </Link>               
                 </Card.Body>
             </Card>
         </div>
