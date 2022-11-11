@@ -7,8 +7,10 @@ import loginImage from '../../image/login.png'
 import Loading from '../Share/Loading';
 import Social from '../Share/Social/Social';
 import swal from 'sweetalert';
-const Login = () => {
+import PageTitle from '../Share/PageTitle';
 
+const Login = () => {
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [signInWithEmailAndPassword, Googleuser, loading, error,] = useSignInWithEmailAndPassword(auth);
@@ -51,6 +53,7 @@ const Login = () => {
 
     return (
         <Container className='bg-primary '>
+             <PageTitle title='Login'></PageTitle>
             <Row className='d-flex justify-content-center align-items-center'>
                 <Col>
                     <img src={loginImage} className='img-fluid' alt="" />
