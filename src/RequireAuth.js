@@ -12,6 +12,7 @@ const RequireAuth = ({ children }) => {
   const location = useLocation();
   const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
 
+  console.log(user)
 
   if (loading) {
     return <Loading></Loading>
@@ -21,7 +22,7 @@ const RequireAuth = ({ children }) => {
     return <Navigate to="/login" state={{ from: location }} replace />
   }
 
-  if (!user.emailVerified) {
+  if (user.providerData[0]?.providerId =='password' && !user.emailVerified) {
     return <div style={{ height: '500px' }} className='d-flex justify-content-center align-items-center'>
       <div>
         <h2 className='text-danger'>Your Email is not Verified</h2>
