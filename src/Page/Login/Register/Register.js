@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile,useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import loginImage from '../../../image/login.png';
 import Social from '../../Share/Social/Social';
 import './Register.css';
-
 import swal from 'sweetalert';
 import PageTitle from '../../Share/PageTitle';
 const Register = () => {
@@ -17,6 +16,7 @@ const Register = () => {
 
     const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, Updateupdating, Updateerror] = useUpdateProfile(auth);
+    const [sendEmailVerification, sending, verifiederror] = useSendEmailVerification(auth);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/'
@@ -48,7 +48,8 @@ const Register = () => {
             createUserWithEmailAndPassword(email, password)
                 .then(() => {
                     updateProfile({ displayName: name })
-                    swal("Good Job!", "you're register!", "success");
+                    sendEmailVerification();
+                    swal("send verified email!", "You check Gmail!", "success");
                 })
 
         }
